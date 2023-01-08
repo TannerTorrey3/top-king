@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/TannerTorrey3/top-g/issues"
   },
-  "homepage": "https://github.com/TannerTorrey3/top-g#readme"
+  "homepage": "https://github.com/TannerTorrey3/top-g#readme",
+  "dependencies": {
+    "@chrisoakman/chessboardjs": "^1.0.0",
+    "chess": "^1.1.0"
+  }
 }
