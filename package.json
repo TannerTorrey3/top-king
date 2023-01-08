@@ -1,0 +1,19 @@
+{
+  "name": "topg",
+  "version": "1.0.0",
+  "description": "Top G Chess",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TannerTorrey3/top-g.git"
+  },
+  "author": "TannerTorrey3",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TannerTorrey3/top-g/issues"
+  },
+  "homepage": "https://github.com/TannerTorrey3/top-g#readme"
+}
