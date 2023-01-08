@@ -4,7 +4,8 @@
   "description": "Top G Chess",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/public/server.js --save-dev"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,10 @@
   "homepage": "https://github.com/TannerTorrey3/top-g#readme",
   "dependencies": {
     "@chrisoakman/chessboardjs": "^1.0.0",
-    "chess": "^1.1.0"
+    "chess": "^1.1.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
   }
 }

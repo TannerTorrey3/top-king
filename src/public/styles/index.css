@@ -1,0 +1,15 @@
+html {
+    width: 100vw;
+    height: 100vh;
+}
+.game-container{
+    position: fixed;
+    top: 25%;
+    left: 25%;
+    height: 50%;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
