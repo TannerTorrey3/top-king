@@ -14,5 +14,8 @@ app.listen(3000, () => {
 
 // Create a route for the home page
 app.get('/', (req, res) => {
-  res.sendFile('index.html');
+  res.sendFile('index.html');//i
 });
+//TODO Attempt to render chessboard using @chrisoakman/chessboardjs
+//TODO Add in chess game logic and game end checks chess: ^1.1.0
+//TODO Add Service workers for above checks
