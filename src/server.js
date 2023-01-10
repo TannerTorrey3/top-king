@@ -8,8 +8,8 @@ const app = express();
 app.use(express.static(__dirname + '/public'));
 
 // Start the server on port 3000
-app.listen(3000, () => {
-  console.log('Express server running on port 3000');
+app.listen(3030, () => {
+  console.log('http://localhost:3030');
 });
 
 // Create a route for the home page
