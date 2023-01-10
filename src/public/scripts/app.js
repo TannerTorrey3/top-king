@@ -1,13 +1,25 @@
+/** 
+
+
+
+ */
+
+// NOTE: this example uses the chess.js library:
+// https://github.com/jhlywa/chess.js
+var board = null;
 
 const config = {
     draggable: true,
     position: 'start',
     showNotation: false,
     showErrors: true,
-    snapSpeed: 'slow'
+    onDrop: onDrop
 }
-const board = Chessboard("myBoard", config)
+board = Chessboard("myBoard", config)
+
+function onDrop (source, target, piece, newPos, oldPos, orientation) {
+}
 
 let resetBoard = () => {
-    board.start(true)
+    board.start(true);
 }
