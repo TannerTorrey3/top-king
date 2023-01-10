@@ -1,11 +1,10 @@
-html {
-    width: 100vw;
-    height: 100vh;
+body {
+    width: 100%;
+    height: 100%;
 }
-.game-container{
+#myBoard {
     position: fixed;
     top: 25%;
     left: 25%;
-    height: 50%;
-    width: 50%;
+
 }
