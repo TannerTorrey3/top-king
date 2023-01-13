@@ -8,3 +8,11 @@ body {
     left: 25%;
 
 }
+#serv{
+    position: fixed;
+    top: 2%;
+    left: 45%;
+    min-width: 5%;
+    background-color: aqua;
+    color: black;
+}
