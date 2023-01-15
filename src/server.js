@@ -19,7 +19,3 @@ app.get('/', (req, res) => {
   console.log(game.fen)
 });
 
-//TODO// Attempt to render chessboard using @chrisoakman/chessboardjs
-//TODO fix flicker on piece reposition(Board flicker glitch)
-//TODO Add in chess game logic and game end checks chess: ^1.1.0
-//TODO Add Service workers for above checks

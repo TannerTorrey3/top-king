@@ -8,10 +8,10 @@
 // https://github.com/jhlywa/chess.js
 if('serviceWorker' in navigator){
     try{
-        await navigator.serviceWorker.register('/scripts/game.js')
+        await navigator.serviceWorker.register('../game.js',{"scope":"/"})
         .then((registration) => {
             if(registration.installing){
-                document.querySelector('serv').textContent = "installing";
+                document.querySelector('#serv').textContent = "installing";
             }else if (registration.waiting) {
                 document.querySelector("#serv").textContent = "waiting";
             } else if (registration.active) {
@@ -44,6 +44,6 @@ function onDrop (source, target, piece, newPos, oldPos, orientation) {
     console.log(`${source}-${target}`)
 }
 
-let resetBoard = () => {
+function resetBoard(){
     board.start(true);
 }
