@@ -44,6 +44,8 @@ function onDrop (source, target, piece, newPos, oldPos, orientation) {
     console.log(`${source}-${target}`)
 }
 
-function resetBoard(){
+const reset = document.querySelector("#res");
+reset.addEventListener('click',()=> {
     board.start(true);
-}
+});
+    
