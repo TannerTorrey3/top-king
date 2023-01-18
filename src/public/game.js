@@ -64,6 +64,7 @@ self.addEventListener('install', (event) => {
         '/',
         '/index.html',
         '/scripts/app.js',
+        '/scripts/sw.js',
         '/manifest.webmanifest',
         '/img/chesspieces/wikipedia/bB.png',
         '/img/chesspieces/wikipedia/bK.png',

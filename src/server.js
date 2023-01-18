@@ -15,7 +15,5 @@ app.listen(3060, () => {
 // Create a route for the home page
 app.get('/', (req, res) => {
   res.render('index.html');//i
-  const game = chess();
-  console.log(game.fen)
 });
 
