@@ -19,10 +19,10 @@
   "homepage": "https://github.com/TannerTorrey3/top-g#readme",
   "dependencies": {
     "@chrisoakman/chessboardjs": "^1.0.0",
+    "chess.js": "^1.0.0-beta.1",
     "compression": "^1.7.4",
     "express": "^4.18.2",
-    "jquery": "^3.6.3",
-    "js-chess-engine": "^1.0.2"
+    "jquery": "^3.6.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

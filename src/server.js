@@ -9,8 +9,8 @@ app.use(compression());
 app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/scripts'));
 // Start the server on port 3000
-app.listen(3030, () => {
-  console.log('http://localhost:3030');
+app.listen(3060, () => {
+  console.log('http://localhost:3060');
 });
 // Create a route for the home page
 app.get('/', (req, res) => {
