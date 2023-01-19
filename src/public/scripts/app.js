@@ -28,6 +28,9 @@ function Board(){
     reset.addEventListener('click',()=> {
         board.start(true);
     });
+    window.addEventListener('resize', () => {
+        board.resize();
+    });
 }
 Board();
     

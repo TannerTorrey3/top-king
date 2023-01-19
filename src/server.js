@@ -7,7 +7,6 @@ const app = express();
 app.use(compression());
 // Set the public directory as the root of the application
 app.use(express.static(__dirname + '/public'));
-app.use(express.static(__dirname + '/scripts'));
 // Start the server on port 3000
 app.listen(3060, () => {
   console.log('http://localhost:3060');

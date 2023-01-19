@@ -65,7 +65,6 @@ self.addEventListener('install', (event) => {
         '/index.html',
         '/scripts/app.js',
         '/scripts/sw.js',
-        '/scripts/jquery-3.6.3.slim.min.js',
         '/manifest.webmanifest',
         '/img/chesspieces/wikipedia/bB.png',
         '/img/chesspieces/wikipedia/bK.png',
@@ -83,6 +82,7 @@ self.addEventListener('install', (event) => {
         '/img/icons/icon-256x256.png',
         '/img/icons/icon-384x384.png',
         '/img/icons/icon-512x512.png',
+        '/img/icons/menu.png',
       ])
     );
 });
