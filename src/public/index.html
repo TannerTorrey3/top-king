@@ -25,17 +25,66 @@
             width: 100%;
             height: 100%;
         }
+        .expandable{
+            position: fixed;
+            top: 10%;
+            left:10%;
+            width: 80%;
+            height: 80%;
+            opacity: 0;
+            visibility: hidden;
+            transform: scale(1.1);
+            transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+            z-index: 2;
+        }
+        .exp-content {
+            position: absolute;
+            top: 0%;
+            left: 0%;
+            background-color: #353535;
+            border: solid 2px#ffffff;
+            padding: 10%;
+            width: 80%;
+            height: 70%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .view {
+            opacity: 1;
+            visibility: visible !important;
+            transform: scale(1.0);
+            transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+        }
+        .close-button {
+            position: fixed;
+            top:0;
+            left:0;
+            float: left;
+            width: 1.5rem;
+            line-height: 1.5rem;
+            text-align: center;
+            cursor: pointer;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .close-button:hover {
+            background-color: #537ab1;
+        }
         #menu {
             position: fixed;
             top: 0%;
-            left:94%;
+            left:0%;
             width:4%;
+            min-width: 60px !important;
             height: 100%;
             border: 1px solid #353535;
-            padding:1%;
+            padding: 1%;
+            padding-top: 3% !important;
             display: flex;
             flex-direction: column;
-            row-gap: 15px;
+            row-gap: 7%;
         }
         .menu-item{
             border-radius: 5%;
@@ -43,13 +92,14 @@
             justify-content: center;
             align-items: center;
             border: solid 2px #ffffff;
+            background-color: #595959;
             padding: 5%;
         }
         .menu-item:hover{
-            background-color: #323b41;
+            background-color: #48565f;
         }
         .menu-icon {
-            width:95%;
+            width: 95%;
             height: auto;
         }
         #settings-icon{
@@ -65,6 +115,7 @@
             justify-content: center;
             align-items: center;
             border: solid 3px #ffffff;
+            min-width: 200px !important;
         }
         #serv{
             position: fixed;
@@ -91,15 +142,20 @@
     <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
+    <section class="expandable">
+        <div class="exp-content">
+            <span class="close-button">&times;</span>
+        </div>
+    </section>
     <section id="menu">
         <section id="res" class="menu-item">
-            <img id="game-icon" class="menu-icon" src="./img/icons/game.png" alt="New Game" >
+            <img id="game-icon" class="menu-icon" src="./img/icons/game.png" alt="New Game">
         </section>
         <section id="user" class="menu-item">
-            <img id="user-icon" class="menu-icon" src="./img/icons/user.png" alt="Account" >
+            <img id="user-icon" class="menu-icon" src="./img/icons/user.png" alt="Account">
         </section>
         <section id="settings" class="menu-item">
-            <img id="settings-icon" class="menu-icon" src="./img/icons/settings.png" alt="Settings" >
+            <img id="settings-icon" class="menu-icon" src="./img/icons/settings.png" alt="Settings">
         </section>
     </section>
     <div id="serv"></div>

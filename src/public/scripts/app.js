@@ -4,6 +4,7 @@
 
  */
 
+
 // NOTE: this example uses the chess.js library:
 // https://github.com/jhlywa/chess.js
 
@@ -13,7 +14,7 @@ function Board(){
     const config = {
         draggable: true,
         position: 'start',
-        showNotation: true,
+        showNotation: false,
         showErrors: true,
         onDrop: onDrop
     }
@@ -31,6 +32,19 @@ function Board(){
     window.addEventListener('resize', () => {
         board.resize();
     });
+
+    const userBtn = document.querySelector('#user');
+    const setBtn = document.querySelector('#settings');
+    const expand = document.querySelector('.expandable');
+    const closeButton = document.querySelector(".close-button"); 
+
+    function toggleExpand(){
+        expand.classList.toggle("view");
+    }
+    
+    userBtn.addEventListener('click', toggleExpand)
+    setBtn.addEventListener('click', toggleExpand)
+    closeButton.addEventListener('click', toggleExpand)
 }
 Board();
     
