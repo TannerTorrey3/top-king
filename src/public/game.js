@@ -83,6 +83,8 @@ self.addEventListener('install', (event) => {
         '/img/icons/icon-384x384.png',
         '/img/icons/icon-512x512.png',
         '/img/icons/menu.png',
+        '/assets/Roboto/Roboto-Black.ttf',
+        '/assets/Roboto/Roboto-Light.ttf',
       ])
     );
 });

@@ -112,7 +112,7 @@ function Board(){
         background-color: rgb(255, 255, 255);
     }
     .close-button:hover {
-        background-color: #537ab1;
+        background-color: #63a1c5;
     }
     .user{
     }
@@ -138,7 +138,7 @@ function Board(){
         align-items:center;
         text-align: center;
         font-size: 1.2em;
-        font-family: 'Roboto';
+        font-family: 'Roboto-Lighti';
     }
     .drop{
         width:100%;
