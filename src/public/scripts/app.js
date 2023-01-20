@@ -49,20 +49,29 @@ function Board(){
         //Create Elements and assign classes
         dynamicContainer = document.createElement('section');
         dynamicContainer.classList.add('user');
+        dynamicContainer.classList.add('dyn');
+
         const colorTheme = document.createElement('section');
         colorTheme.classList.add('modal-item');
+
         const themeLabel = document.createElement('label');
         themeLabel.classList.add('item-label');
+        themeLabel.innerText = `Test`;
+        const secondLabel = themeLabel.cloneNode(true);
         //Append children
         dynamicContainer.appendChild(colorTheme);
         dynamicContainer.appendChild(themeLabel);
         colorTheme.appendChild(themeLabel);
+        colorTheme.appendChild(secondLabel);
+        const secondTheme = colorTheme.cloneNode(true);
+        dynamicContainer.appendChild(secondTheme);
         shadowHost.appendChild(dynamicContainer);
     }
     //Settings Menu Content
     function renderSettMn(){
         dynamicContainer = document.createElement('section');
         dynamicContainer.classList.add('settings');
+        dynamicContainer.classList.add('dyn');
         shadowHost.appendChild(dynamicContainer);
     }
     function renderMenu(id) {
@@ -73,9 +82,7 @@ function Board(){
         shadowHost.removeChild(dynamicContainer);
     }
     function checkEmpty(mode){
-        if(mode === 0){
-            return true;
-        }else return false;
+        return mode === 0;
     }
     //Dynamic menu content
     function loadModal(id,mode){
@@ -106,14 +113,32 @@ function Board(){
         background-color: #537ab1;
     }
     .user{
-        width: 100%;
-        height: 100%;
         background-color: #005500;
     }
-    .settings{
+    .settings{   
+        background-color: #550000;
+    }
+    .modal-item{
+        width: 35%;
+        height: 30%;
+        border: solid 2px aqua;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-top: 5%;
+    }
+    .item-label{
+        color: white;
+        height: 30%;
+        text-align: center;
+    }
+    .dyn{
         width: 100%;
         height: 100%;
-        background-color: #550000;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        column-gap: 10%;
     }`;
 
     shadowHost.appendChild(contentStyle);
