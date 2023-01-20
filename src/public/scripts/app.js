@@ -46,23 +46,26 @@ function Board(){
     let dynamicContainer = null;
     //User Menu Content
     function renderUsrMn(){
-        //Create Elements and assign classes
+        //Create Dynamic Container for dynamic content
         dynamicContainer = document.createElement('section');
         dynamicContainer.classList.add('user');
         dynamicContainer.classList.add('dyn');
-
-        const colorTheme = document.createElement('section');
+        //Usr Menu Item
+        const colorTheme = document.createElement('section');//Color Theme Selector
         colorTheme.classList.add('modal-item');
-
+        //Label for Color Profiles
         const themeLabel = document.createElement('label');
         themeLabel.classList.add('item-label');
-        themeLabel.innerText = `Test`;
-        const secondLabel = themeLabel.cloneNode(true);
+        themeLabel.innerText = `Color Profiles`;
+        //Dropdown for color profiles
+        const colorProfilesEl = document.createElement('div');
+        colorProfilesEl.classList.add('drop');
+        const colorProfilesContainer = document.createElement('section');
+        colorProfilesContainer.classList.add('drop-container');
         //Append children
         dynamicContainer.appendChild(colorTheme);
-        dynamicContainer.appendChild(themeLabel);
         colorTheme.appendChild(themeLabel);
-        colorTheme.appendChild(secondLabel);
+        colorTheme.appendChild(colorProfilesEl);
         const secondTheme = colorTheme.cloneNode(true);
         dynamicContainer.appendChild(secondTheme);
         shadowHost.appendChild(dynamicContainer);
@@ -108,29 +111,45 @@ function Board(){
         cursor: pointer;
         background-color: rgb(255, 255, 255);
     }
-
     .close-button:hover {
         background-color: #537ab1;
     }
     .user{
-        background-color: #005500;
     }
     .settings{   
-        background-color: #550000;
     }
     .modal-item{
         width: 35%;
-        height: 30%;
-        border: solid 2px aqua;
+        height: 10%;
+        border: solid 1px #ffffff;
         display: flex;
         flex-direction: column;
-        justify-content: space-evenly;
+        justify-content: center;
+        row-gap: 3%;
         margin-top: 5%;
+        box-shadow: 5px 4px 5px #000000;
+        background-color: #595959;
     }
     .item-label{
         color: white;
-        height: 30%;
+        height: 20%;
+        display: flex;
+        justify-content: center;
+        align-items:center;
         text-align: center;
+        font-size: 1.2em;
+        font-family: 'Roboto';
+    }
+    .drop{
+        width:100%;
+        height:clamp(15%,15%,25%);
+        display: flex;
+        flex-direction: column;
+        background-color: aqua;
+    }
+    .drop.active{
+        max-height: 50%;
+        background-color: #353535;
     }
     .dyn{
         width: 100%;
@@ -143,15 +162,14 @@ function Board(){
 
     shadowHost.appendChild(contentStyle);
     shadowHost.appendChild(exitBtn);
-
     const userBtn = document.querySelector('#user');
     const setBtn = document.querySelector('#settings');
     const expand = document.querySelector('.expandable');
-    
+
     const map = new Map();
     map.set('usr','sett'); 
     map.set('sett','usr'); 
-    
+
     function configClassesExpand(id){
         if(expand.classList.length > 1){
             if(expand.classList.contains(id)){expand.classList.remove(id);toggleExpand();derenderMenu();}

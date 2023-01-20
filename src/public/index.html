@@ -10,6 +10,11 @@
     <link rel="icon" href="/img/icons/icon-192x192.png">
     <title>Top G Chess</title>
     <style id="html-css">
+        @font-face {
+            font-family: 'Roboto';
+            src: url('./assets/Roboto/Roboto-Light.ttf');
+            src: url('./assets/Roboto/Roboto.ttf');
+        }
         html {
             width: 100%;
             background-color: #2d2c2c;
@@ -36,6 +41,7 @@
             left: 0%;
             background-color: #353535;
             border: solid 2px #ffffff;
+            box-shadow: 5px 5px 8px #000000;
             padding: 10%;
             width: 80%;
             height: 70%;
@@ -93,8 +99,9 @@
         }
         #myBoard {
             position: fixed;
-            top: 15%;
-            left: 30%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
             padding: 0% !important;
             display: flex;
             justify-content: center;
@@ -108,6 +115,27 @@
             min-width: 5%;
             background-color: rgb(255, 174, 0);
             color: black;
+        }
+        .home-btn{
+            position:fixed;
+            top: 0%;
+            left:0%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 2%;
+        }
+        .app-label{
+            font-family: 'Roboto';
+            color:#ffffff;
+            font-size: 4.2em;
+            text-align: center;
+            text-shadow: 0px 3px 5px #000000;
+        }
+        .app-label:hover{
+            color:#909090;
+            text-shadow: 0px 1px 5px #000000;
         }
     </style>
     <style id="chessboard-css">/*! chessboard.js v1.0.0 | (c) 2019 Chris Oakman | MIT License chessboardjs.com/license */
@@ -127,6 +155,7 @@
         <div class="exp-content">
         </div>
     </section>
+    <section class="home-btn"><label class="app-label">TOP KING CHESS</label></section>
     <section id="menu">
         <section id="res" class="menu-item">
             <img id="game-icon" class="menu-icon" src="./img/icons/game.png" alt="New Game">
