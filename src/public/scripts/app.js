@@ -139,14 +139,19 @@ function Board(){
         }
         
     }
-
+    function closeExpandable(){
+        expand.classList.remove('usr');
+        expand.classList.remove('sett');
+        toggleExpand();
+        derenderMenu();
+    }
     function toggleExpand(){
         expand.classList.toggle("view");
     }
 
     userBtn.addEventListener('click',()=> configClassesExpand('usr'));
     setBtn.addEventListener('click', ()=> configClassesExpand('sett'));
-    exitBtn.addEventListener('click', toggleExpand);
+    exitBtn.addEventListener('click', closeExpandable);
 
 }
 Board();
