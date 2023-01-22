@@ -4,11 +4,8 @@ if('serviceWorker' in navigator){
         await navigator.serviceWorker.register('../game.js',{"scope":"/",'type':'module'})
         .then((registration) => {
             if(registration.installing){
-                document.querySelector('#serv').textContent = "installing";
             }else if (registration.waiting) {
-                document.querySelector("#serv").textContent = "waiting";
             } else if (registration.active) {
-                document.querySelector("#serv").textContent = "active";
             }
         })
         .catch((err) => {

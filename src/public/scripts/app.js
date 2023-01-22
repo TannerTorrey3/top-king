@@ -47,21 +47,26 @@ function Board(){
     //User Menu Content
     function renderUsrMn(){
         //Create Dynamic Container for dynamic content
-        dynamicContainer = document.createElement('section');
+        dynamicContainer = document.createElement('ul');
         dynamicContainer.classList.add('user');
         dynamicContainer.classList.add('dyn');
         //Usr Menu Item
-        const colorTheme = document.createElement('section');//Color Theme Selector
+        const colorTheme = document.createElement('li');//Color Theme Selector
         colorTheme.classList.add('modal-item');
         //Label for Color Profiles
         const themeLabel = document.createElement('label');
         themeLabel.classList.add('item-label');
         themeLabel.innerText = `Color Profiles`;
         //Dropdown for color profiles
-        const colorProfilesEl = document.createElement('div');
+        const colorProfilesEl = document.createElement('ul');
+        colorProfilesEl.innerText = `Selected Profile`;
         colorProfilesEl.classList.add('drop');
-        const colorProfilesContainer = document.createElement('section');
-        colorProfilesContainer.classList.add('drop-container');
+        const dropEl = document.createElement('li');
+        dropEl.innerText = `Available Profile`;
+        dropEl.classList.add('profile');
+        const dropEl2 = dropEl.cloneNode(true);
+        colorProfilesEl.appendChild(dropEl);
+        colorProfilesEl.appendChild(dropEl2);
         //Append children
         dynamicContainer.appendChild(colorTheme);
         colorTheme.appendChild(themeLabel);
@@ -124,11 +129,11 @@ function Board(){
         border: solid 1px #ffffff;
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        row-gap: 3%;
-        margin-top: 5%;
+        row-gap: 15%;
+        padding:2%;
         box-shadow: 5px 4px 5px #000000;
         background-color: #595959;
+        overflow-y:hidden;
     }
     .item-label{
         color: white;
@@ -137,19 +142,44 @@ function Board(){
         justify-content: center;
         align-items:center;
         text-align: center;
-        font-size: 1.2em;
-        font-family: 'Roboto-Lighti';
+        font-size: 1.4rem;
+        font-family: 'Roboto';
     }
     .drop{
-        width:100%;
-        height:clamp(15%,15%,25%);
-        display: flex;
-        flex-direction: column;
-        background-color: aqua;
+        height: 1.2rem;
+        overflow-y: hidden;
+        font-size: 1.2rem;
+        font-family: 'Roboto';
+        padding:2.5%;
+        text-align: center;
+        color: #ffffff;
+        list-style-type: none;
+        background-color: #595959;
+        box-shadow: none;
+        border: none;
+        transition: box-shadow 0.15s border 0s;
     }
-    .drop.active{
-        max-height: 50%;
-        background-color: #353535;
+    .drop li{
+        color: #ffffff;
+        font-size:1.2rem;
+        font-family: 'Roboto';
+        
+    }
+    .drop li:hover{
+        color: #ffffff;
+        font-size:1.2rem;
+        font-family: 'Roboto';
+        background-color:#63a1c5; 
+    }
+    .modal-item:hover{
+        overflow-y: visible;
+    }
+    .modal-item:hover .drop{
+        height: 135px;
+        overflow-y: visible;
+        box-shadow: 1px 13px 4px #000000;
+        border: solid 1px #ffffff;
+        transition: box-shadow 0.15s;
     }
     .dyn{
         width: 100%;
