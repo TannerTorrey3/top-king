@@ -7,9 +7,12 @@
 
 // NOTE: this example uses the chess.js library:
 // https://github.com/jhlywa/chess.js
-
+import { Chess } from "./chess.js";
 function Board(){
     let board = null;
+
+    const game = new Chess();
+    console.log(`${game.fen()}`);
 
     const config = {
         draggable: true,
@@ -59,10 +62,10 @@ function Board(){
         themeLabel.innerText = `Color Profiles`;
         //Dropdown for color profiles
         const colorProfilesEl = document.createElement('ul');
-        colorProfilesEl.innerText = `Selected Profile`;
+        colorProfilesEl.innerHTML = `<span class="profile selected">Greys<img class="clr-img"src="./img/board/greys.png" alt=""></span>`;
         colorProfilesEl.classList.add('drop');
         const dropEl = document.createElement('li');
-        dropEl.innerText = `Available Profile`;
+        dropEl.innerHTML = `Black & White<img class="clr-img"src="./img/board/blck-wht.png" alt="">`;
         dropEl.classList.add('profile');
         const dropEl2 = dropEl.cloneNode(true);
         colorProfilesEl.appendChild(dropEl);
@@ -146,11 +149,11 @@ function Board(){
         font-family: 'Roboto';
     }
     .drop{
-        height: 1.2rem;
+        height: 2.3rem;
         overflow-y: hidden;
         font-size: 1.2rem;
         font-family: 'Roboto';
-        padding:2.5%;
+        padding:0.5%;
         text-align: center;
         color: #ffffff;
         list-style-type: none;
@@ -159,11 +162,15 @@ function Board(){
         border: none;
         transition: box-shadow 0.15s border 0s;
     }
+    .drop img{
+        width: auto;
+        height: 2.4rem;
+    }
     .drop li{
         color: #ffffff;
         font-size:1.2rem;
         font-family: 'Roboto';
-        
+        display: hidden;
     }
     .drop li:hover{
         color: #ffffff;
@@ -180,6 +187,16 @@ function Board(){
         box-shadow: 1px 13px 4px #000000;
         border: solid 1px #ffffff;
         transition: box-shadow 0.15s;
+        padding: 2.5%
+        row-gap: 1%;
+    }
+    .profile{
+        display:flex;
+        flex-direction:row;
+        justify-content:space-between;
+        flex-wrap: nowrap;
+        margin:1%;
+        text-align: center;
     }
     .dyn{
         width: 100%;

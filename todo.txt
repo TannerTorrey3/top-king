@@ -1,0 +1,5 @@
+Color Schemes:
+1.) Greys: .white-1e1d7{background-color:#adadad;color:#ffffff}.black-3c85d{background-color:#353535;color:#ffffff}
+2.) Black & White: .white-1e1d7{background-color:#ffffff;color:#000000}.black-3c85d{background-color:#000000;color:#ffffff}
+3.) Autumn: .white-1e1d7{background-color:#ba753c;color:#ffffff}.black-3c85d{background-color:#492f1c;color:#ffffff}
+4.) Spring: .white-1e1d7{background-color:#6a9fcd;color:#ffffff}.black-3c85d{background-color:#14450e;color:#ffffff}
