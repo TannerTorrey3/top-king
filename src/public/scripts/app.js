@@ -117,7 +117,7 @@ function Board(){
     window.addEventListener('resize', () => {
         board.resize();
     });
-
+    
     //Shadow root for dynamic menu content
     const modalContent = document.querySelector('.exp-content');
     const shadowHost = modalContent.attachShadow({mode:'open'});
@@ -126,7 +126,7 @@ function Board(){
     let exitBtn = document.createElement('span');
     exitBtn.classList.add('close-button');
     exitBtn.innerHTML = '&times';
-
+    let root = document.documentElement;
     let dynamicContainer = null;
     //User Menu Content
     function renderUsrMn(){
@@ -148,6 +148,21 @@ function Board(){
         const dropEl = document.createElement('li');
         dropEl.innerHTML = `Black & White<img class="clr-img"src="./img/board/blck-wht.png" alt="">`;
         dropEl.classList.add('profile');
+        let rootmini = root.style;
+        function updateColorScheme(elem){
+            rootmini.setProperty('--bck-main', "#ffffff");//TODO !!COMPLETE!!
+            rootmini.setProperty('--bck-sec', "#ffffff");
+            rootmini.setProperty('--bck-alt', "#ffffff");
+            rootmini.setProperty('--brd-main', "#ffffff");
+            rootmini.setProperty('--brd-alt', "#ffffff");
+            rootmini.setProperty('--font-main', "#ffffff");
+            rootmini.setProperty('--font-alt', "#ffffff");
+        }
+        function updateBoardScheme(elem){
+            rootmini.setProperty('--brd-wht', "#ffffff");
+            rootmini.setProperty('--brd-blk', "#ffffff");
+        }
+        dropEl.addEventListener('click',elem => updateColorScheme(elem));
         const dropEl2 = dropEl.cloneNode(true);
         colorProfilesEl.appendChild(dropEl);
         colorProfilesEl.appendChild(dropEl2);

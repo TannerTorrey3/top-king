@@ -3,10 +3,11 @@
 //TODO// implement Caching system for game.js & implement chess engine within cache ... Use lighthouse and workbox?
 
 //TODO// DEBUG app.js menu popups when closed using x does not render dynamic content on reopen
+//TODO add vars to all css colors. except shadows ... should never be too dark on main theme where you cant see black shadows
+//TODO create js functions in app.js for creating drop elements .. take in data {} including name and colors and values
 //TODO Add gamemodes
 //TODO complete game menu window
 //TODO complete user menu window
-//TODo implement :root color-scheme to enable single line swap in app.js
 //TODO complete settings menu window
 //TODO fix lighthouse Fails including preloading fonts and dont block render while loading
 //TODO serve high resolution images min of 96x96

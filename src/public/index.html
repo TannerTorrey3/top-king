@@ -10,7 +10,10 @@
     <link rel="icon" href="/img/icons/icon-192x192.png">
     <link rel="preload" href="/assets/Roboto/Roboto-Black.ttf" as="font" type="font/ttf" crossorigin>
     <title>Top King Chess</title>
-    <style id="html-css">/**/
+    <style id="html-css">
+        :root{
+            --bck-main: #2d2c2c;
+        }
         *{
             /*No Text Highlighting globally*/
             -webkit-user-select: none; /* Safari */        
@@ -26,7 +29,7 @@
         }
         html {
             width: 100%;
-            background-color: #2d2c2c;
+            background-color: var(--bck-main);
             overflow: hidden;
         }
         body {
