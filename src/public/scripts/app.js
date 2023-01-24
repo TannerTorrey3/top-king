@@ -12,7 +12,8 @@ function Board(){
     let board = null;
 
     const game = new Chess();
-
+    const fenEl =  document.querySelector('#fen');
+    const statusEl =  document.querySelector('#status');
     function onDragStart (source, piece, position, orientation) {
         // do not pick up pieces if the game is over
         if (game.isGameOver()) return false
@@ -23,11 +24,11 @@ function Board(){
           return false
         }
     }
-    
+    let status,moveColor;
     function updateStatus () {
-        var status = ''
+        status = ''
       
-        var moveColor = 'White'
+        moveColor = 'White'
         if (game.turn() === 'b') {
           moveColor = 'Black'
         }
@@ -51,17 +52,26 @@ function Board(){
             status += ', ' + moveColor + ' is in check'
           }
         }
-      
-        document.querySelector('#status').innerHTML = `${status}`;
-        document.querySelector('#fen').innerHTML = `${game.fen()}`;
+        
+        updateGameDisplay();
+    }
+    function updateGameDisplay(){
+        statusEl.innerHTML = `${status}`;
+        fenEl.innerHTML = `${game.fen()}`;
+    }
+    function toggleOrientation(){
+        if(board.orientation() === 'white')board.orientation('black');
+        else{board.orientation('white');}
     }
     function onDrop (source, target) {
         // see if the move is legal
         try {
-            let move =game.move({
+            game.move({
                 from: source,
-                to: target // NOTE: always promote to a queen for example simplicity
-            })
+                to: target,
+                promotion: 'q' // NOTE: always promote to a queen for example simplicity
+            });
+            toggleOrientation();
         }
         catch(isIllegal){
             board.position(game.fen())
@@ -69,6 +79,7 @@ function Board(){
         // illegal move
         
         updateStatus()
+        
     }
 
     function onSnapEnd () {
@@ -89,9 +100,18 @@ function Board(){
     board = Chessboard("myBoard", config);
     updateStatus();
 
+    function resetGame(){
+        board.start(true);
+        game.reset();
+        board.orientation('white');
+        updateStatus();
+        updateGameDisplay();
+        
+    }
+    
     const reset = document.querySelector("#res");
     reset.addEventListener('click',()=> {
-        board.start(true);
+        resetGame();
     });
 
     window.addEventListener('resize', () => {
