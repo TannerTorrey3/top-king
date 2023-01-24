@@ -34,6 +34,16 @@
             height: 100%;
             padding: 4%;
         }
+        .temp{
+            position: fixed;
+            top: 90%;
+            left: 15%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+        }
         .expandable{
             position: fixed;
             top: 10%;
@@ -184,6 +194,12 @@
         </div>
     </section>
     <section class="home-btn"><label class="app-label">TOP KING CHESS</label></section>
+    <div class="temp">
+        <label>Status:</label>
+        <div id="status"></div>
+        <label>FEN:</label>
+        <div id="fen"></div>
+    </div>
     <section id="menu">
         <section id="res" class="menu-item">
             <img id="game-icon" class="menu-icon" src="./img/icons/game.png" alt="New Game">
