@@ -8,8 +8,8 @@ app.use(compression());
 // Set the public directory as the root of the application
 app.use(express.static(__dirname + '/public'));
 // Start the server on port 3000
-app.listen(3060, () => {
-  console.log('http://localhost:3060');
+app.listen(3090, () => {
+  console.log('http://localhost:3090');
 });
 // Create a route for the home page
 app.get('/', (req, res) => {

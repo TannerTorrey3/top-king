@@ -130,6 +130,12 @@ function Board(){
     let dynamicContainer = null;
     //User Menu Content
     function renderUsrMn(){
+        //Color Schemes Map
+        const schemeData = new Map();
+        schemeData.set("Ash & Water", (["#2d2c2c","#595959","#63a1c5","#ffffff","#63a1c5","#ffffff","#000000","#63a1c5","#48565f"]));
+        schemeData.set("Dark & Royal",(["#111111","#424242","#860FD3","#ffffff","#860FD3","#ffffff","#000000","#860FD3","#898915"]));
+        schemeData.set("Snow & Pine ",(["#ffffff","#dddddd","#0C650A","#000000","#0C650A","#ffffff","#000000","#0C650A","#412482"]));
+        schemeData.set("White",(["#000000","#000000","#000000","#000000","#000000","#000000","#000000","ffffff"]));
         //Create Dynamic Container for dynamic content
         dynamicContainer = document.createElement('ul');
         dynamicContainer.classList.add('user');
@@ -142,30 +148,46 @@ function Board(){
         themeLabel.classList.add('item-label');
         themeLabel.innerText = `Color Profiles`;
         //Dropdown for color profiles
-        const colorProfilesEl = document.createElement('ul');
-        colorProfilesEl.innerHTML = `<span class="profile selected">Greys<img class="clr-img"src="./img/board/greys.png" alt=""></span>`;
-        colorProfilesEl.classList.add('drop');
-        const dropEl = document.createElement('li');
-        dropEl.innerHTML = `Black & White<img class="clr-img"src="./img/board/blck-wht.png" alt="">`;
-        dropEl.classList.add('profile');
+        const colorProfilesEl = generateDrop();
         let rootmini = root.style;
-        function updateColorScheme(elem){
-            rootmini.setProperty('--bck-main', "#ffffff");//TODO !!COMPLETE!!
-            rootmini.setProperty('--bck-sec', "#ffffff");
-            rootmini.setProperty('--bck-alt', "#ffffff");
-            rootmini.setProperty('--brd-main', "#ffffff");
-            rootmini.setProperty('--brd-alt', "#ffffff");
-            rootmini.setProperty('--font-main', "#ffffff");
-            rootmini.setProperty('--font-alt', "#ffffff");
+        function generateDrop(){
+            let dropUlEl = document.createElement('ul');
+            dropUlEl.innerHTML = `<span class="profile selected">Greys<img class="clr-img"src="./img/board/greys.png" alt=""></span>`;
+            dropUlEl.classList.add('drop');
+
+            schemeData.forEach((v,k) => {
+                let genEl = generateDropEl(k,v);
+                dropUlEl.appendChild(genEl);
+            })
+            return dropUlEl;
         }
-        function updateBoardScheme(elem){
-            rootmini.setProperty('--brd-wht', "#ffffff");
-            rootmini.setProperty('--brd-blk', "#ffffff");
+        function generateDropEl(key,colors){
+            let dropEl = document.createElement('li');
+            dropEl.innerHTML = `${key}<img class="clr-img"src="./img/board/blck-wht.png" alt="">`;
+            dropEl.classList.add('profile');
+            dropEl.setAttribute('id', key);
+            dropEl.addEventListener('click',() => {
+                updateColorScheme(colors);
+            });
+            return dropEl;
         }
-        dropEl.addEventListener('click',elem => updateColorScheme(elem));
-        const dropEl2 = dropEl.cloneNode(true);
-        colorProfilesEl.appendChild(dropEl);
-        colorProfilesEl.appendChild(dropEl2);
+        function updateColorScheme(colors){
+
+            rootmini.setProperty('--bck-main', `${colors[0]}`);
+            rootmini.setProperty('--bck-sec', `${colors[1]}`);
+            rootmini.setProperty('--bck-alt', `${colors[2]}`);
+            rootmini.setProperty('--brd-main', `${colors[3]}`);
+            rootmini.setProperty('--brd-alt', `${colors[4]}`);
+            rootmini.setProperty('--font-main', `${colors[5]}`);
+            rootmini.setProperty('--font-sec', `${colors[6]}`);
+            rootmini.setProperty('--font-alt', `${colors[7]}`);
+            rootmini.setProperty('--high-main', `${colors[8]}`);
+        }
+        function updateBoardScheme(){
+            rootmini.setProperty('--brd-0-wht', "#ffffff");
+            rootmini.setProperty('--brd-0-blk', "#000000");
+        }
+        
         //Append children
         dynamicContainer.appendChild(colorTheme);
         colorTheme.appendChild(themeLabel);
@@ -213,30 +235,25 @@ function Board(){
         line-height: 1.5rem;
         text-align: center;
         cursor: pointer;
-        background-color: rgb(255, 255, 255);
+        background-color: var(--brd-main)
     }
     .close-button:hover {
-        background-color: #63a1c5;
-    }
-    .user{
-    }
-    .settings{   
+        background-color: var(--bck-alt);
     }
     .modal-item{
         width: 35%;
         height: 10%;
-        border: solid 1px #ffffff;
+        border: solid 1px var(--brd-main);
         display: flex;
         flex-direction: column;
         row-gap: 15%;
         padding:2%;
         box-shadow: 5px 4px 5px #000000;
-        background-color: #595959;
+        background-color: var(--bck-sec);
         overflow-y:hidden;
     }
     .item-label{
-        color: white;
-        height: 20%;
+        color: var(--font-main);
         display: flex;
         justify-content: center;
         align-items:center;
@@ -251,9 +268,9 @@ function Board(){
         font-family: 'Roboto';
         padding:0.5%;
         text-align: center;
-        color: #ffffff;
+        color: var(--font-main);
         list-style-type: none;
-        background-color: #595959;
+        background-color: var(--bck-sec);
         box-shadow: none;
         border: none;
         transition: box-shadow 0.15s border 0s;
@@ -263,23 +280,20 @@ function Board(){
         height: 2.4rem;
     }
     .drop li{
-        color: #ffffff;
+        color: var(--font-main);
         font-size:1.2rem;
         font-family: 'Roboto';
-        display: hidden;
     }
     .drop li:hover{
-        color: #ffffff;
-        font-size:1.2rem;
-        font-family: 'Roboto';
-        background-color:#63a1c5; 
+        color: var(--font-sec);
+        background-color:var(--bck-alt); 
     }
     .modal-item:hover{
         overflow-y: visible;
     }
     .modal-item:hover .drop{
-        height: 135px;
-        overflow-y: visible;
+        min-height: 135px;
+        overflow-y: scroll;
         box-shadow: 1px 13px 4px #000000;
         border: solid 1px #ffffff;
         transition: box-shadow 0.15s;

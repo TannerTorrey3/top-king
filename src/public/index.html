@@ -12,7 +12,24 @@
     <title>Top King Chess</title>
     <style id="html-css">
         :root{
+            /*rootmini.setProperty('--bck-main', data[0]);//TODO !!COMPLETE!! use call to map to get proper color json. store preffered method in userconfig.json
+                rootmini.setProperty('--bck-sec', data[1]);
+                rootmini.setProperty('--bck-alt', data[2]);
+                rootmini.setProperty('--brd-main', data[3]);
+                rootmini.setProperty('--brd-alt', data[4]);
+                rootmini.setProperty('--font-main', data[5]);
+                rootmini.setProperty('--font-alt', data[6]);
+                TODO add options for highlgithed elements example on hover
+                */
             --bck-main: #2d2c2c;
+            --bck-sec: #595959;
+            --bck-alt:#63a1c5;
+            --brd-main:#ffffff;
+            --brd-alt:#63a1c5;
+            --font-main:#ffffff;
+            --font-sec: #000000;
+            --font-alt:#63a1c5;
+            --high-main: #48565f;
         }
         *{
             /*No Text Highlighting globally*/
@@ -45,7 +62,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #ffffff;
+            color: var(--font-main);
         }
         .expandable{
             position: fixed;
@@ -63,8 +80,8 @@
             position: absolute;
             top: 0%;
             left: 0%;
-            background-color: #353535;
-            border: solid 2px #ffffff;
+            background-color: var(--bck-main);
+            border: solid 2px var(--brd-main);
             box-shadow: 5px 5px 8px #000000;
             padding: 10%;
             width: 80%;
@@ -94,34 +111,34 @@
             width:4%;
             min-width: 60px !important;
             height: 100%;
-            border-right: 2px solid #ffffff;
+            border-right: 2px solid var(--brd-main);
             padding: 1%;
             padding-top: 3% !important;
             display: flex;
             flex-direction: column;
             row-gap: 7%;
             z-index: 4;
-            background-color:#595959;
+            background-color: var(--bck-sec);
         }
         .menu-item{
             border-radius: 5%;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: solid 2px #ffffff;
-            background-color:#63a1c5;
+            border: solid 2px var(--brd-main);
+            background-color:var(--bck-alt);
             padding: 5%;
             box-shadow: 1px 13px 5px #000000;
             transition: box-shadow 0.15s;
             
         }
         .menu-item:hover{
-            background-color:#595959;
+            background-color:var(--bck-sec);
             box-shadow: 1px 2px 5px #000000;
             transition: box-shadow 0.15s;
         }
         .menu-item:active{
-            background-color: #48565f;
+            background-color: var(--high-main);
         }
         .menu-icon {
             width: 95%;
@@ -143,14 +160,6 @@
             min-width: 200px !important;
             z-index: 0;
         }
-        #serv{
-            position: fixed;
-            top: 17%;
-            left: 71%;
-            min-width: 5%;
-            background-color: rgb(255, 174, 0);
-            color: black;
-        }
         .home-btn{
             position:fixed;
             top: 4%;
@@ -163,8 +172,8 @@
         }
         .app-label{
             font-family: 'Roboto';
-            text-decoration: solid 2px #ffffff;;
-            color:#63a1c5;
+            text-decoration: solid 2px var(--brd-main);
+            color:var(--font-alt);
             font-size: calc(64px + 0.390625vh);
             text-align: center;
             text-shadow: 1px 13px 4px #000000;
@@ -175,7 +184,7 @@
             transition: text-shadow 0.15s;
         }
         .app-label:active{
-            color:#48565f;
+            color:var(--high-main);
         }
     </style>
     <style id="chessboard-css">/*! chessboard.js v1.0.0 | (c) 2019 Chris Oakman | MIT License chessboardjs.com/license */
