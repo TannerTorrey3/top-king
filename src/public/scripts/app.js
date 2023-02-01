@@ -131,10 +131,11 @@ function Board(){
     //User Menu Content
     function renderUsrMn(){
         //Color Schemes Map
+        //Color order: bck-main,bck-sec,bck-alt,brd-main,brd-alt,font-main,font-sec,font-alt,high-main
         const schemeData = new Map();
         schemeData.set("Ash & Water", (["#2d2c2c","#595959","#63a1c5","#ffffff","#63a1c5","#ffffff","#000000","#63a1c5","#48565f"]));
         schemeData.set("Dark & Royal",(["#111111","#424242","#860FD3","#ffffff","#860FD3","#ffffff","#000000","#860FD3","#898915"]));
-        schemeData.set("Snow & Pine ",(["#ffffff","#dddddd","#0C650A","#000000","#0C650A","#ffffff","#000000","#0C650A","#412482"]));
+        schemeData.set("Snow & Pine ",(["#ffffff","#dddddd","#0C650A","#0C650A","#ffffff","#0000000","#ffffff","#0C650A","#412482"]));
         schemeData.set("White",(["#000000","#000000","#000000","#000000","#000000","#000000","#000000","ffffff"]));
         //Create Dynamic Container for dynamic content
         dynamicContainer = document.createElement('ul');
@@ -189,11 +190,10 @@ function Board(){
         }
         
         //Append children
-        dynamicContainer.appendChild(colorTheme);
+        dynamicContainer.appendChild(colorTheme);//Adding colorThemes
         colorTheme.appendChild(themeLabel);
         colorTheme.appendChild(colorProfilesEl);
-        const secondTheme = colorTheme.cloneNode(true);
-        dynamicContainer.appendChild(secondTheme);
+        //TODO append item for board profiels... attach actionListener(clicl => updateBoardScheme)
         shadowHost.appendChild(dynamicContainer);
     }
     //Settings Menu Content
@@ -242,7 +242,7 @@ function Board(){
     }
     .modal-item{
         width: 35%;
-        height: 10%;
+        height: 15%;
         border: solid 1px var(--brd-main);
         display: flex;
         flex-direction: column;
