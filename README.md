@@ -1,2 +1,3 @@
 # Top G Chess
-## A multiplayer chess platform built on the XRPL
+### A multiplayer chess platform built on the XRPL
+### COMING SOON
