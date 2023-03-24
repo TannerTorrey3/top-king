@@ -22,14 +22,13 @@ Our free-to-play platform will be funded through sales of contract, providing us
 
 ## Public Version 1.0 -- Technical Specifications and Development Strategies
 
-Progressive Web App, prioritizes network communication over retrieval from a local cache.
+Progressive Web App, prioritizes network communication over retrieval from a local cache.  
+Will be able to support XRPL offline, requests will be sent upon reconnection.  
 #
-Will be able to support XRPL offline, requests will be sent upon reconnection.
-#
-Through leveraging NFTS and XRP, the XRPL ledger will provide:
-1.) Ability for players to play-and-profit, in real time. 
-2.) Collect new versions of "playing cards" and progress in skill based matchmaking. 
-3.) Battle players for stakes including playing cards, currency, and more!
+Through leveraging NFTS and XRP, the XRPL ledger will provide:  
+1.) Ability for players to play-and-profit, in real time.  
+2.) Collect new versions of "playing cards" and progress in skill based matchmaking.   
+3.) Battle players for stakes including playing cards, currency, and more!  
 
 
 ####  VERSION 1.0 RELEASE DATE: November 6th, 2023 (Day following FIDE Grand Swiss tournament)
