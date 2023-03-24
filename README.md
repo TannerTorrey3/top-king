@@ -1,5 +1,5 @@
 # Top King Chess
-### A multiplayer chess platform built on the XRPL
+### A multiplayer chess platform built on the XRP Ledger
 ## Think YOU are the Top King?
 Learn the fundamentals of chess and the XRPL all on one platform, FREE!!!
 Battle players across the globe, trade commodities, currency, and communicate in real-time. Exchange culture, knowledge, and a love for the XRPL! 
