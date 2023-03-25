@@ -17,18 +17,17 @@ Our innovations to the game of chess, will create a new platform where gaming ca
 Spread our love for chess, blockchain, and cultural diversity to our users. To provide financial inclusion and access to education to our users, and never charge for it. We are commited to sustainability, security of our users, and decentralized finance/education. We are and always will be, "for the people by the people".
 
 All members of our development team are volunteers, who believe in our mission, goals, and vision.
-
-***
+  
 <img width="1664" alt="Screenshot 2023-03-24 at 2 18 57 PM" src="https://user-images.githubusercontent.com/70401747/227644362-f7b7a20d-b67f-4684-b258-756153f43373.png">
-***  
+  
 ## Funding
 ### Prior Release
 Crowd sourced funds and grant programs will fund initial infastructure and deployment costs as well as advertising. 
 ### Post Release
 Our free-to-play platform will be funded through sales of contract, providing users temporary voting rights and membership to the Development and Design Board.  
-***  
+  
 <img width="1673" alt="Screenshot 2023-03-24 at 2 17 48 PM" src="https://user-images.githubusercontent.com/70401747/227644309-522787c6-074c-42e7-8a24-d2ec46a43a5a.png">
-***  
+  
 ## Public Version 1.0 -- Technical Specifications and Development Strategies
 
 Progressive Web App, prioritizes network communication over retrieval from a local cache.  
