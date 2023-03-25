@@ -1,5 +1,12 @@
 
 const compression = require('compression');
+const xrpl = require('xrpl');
+
+let fund_result, test_wallet;
+
+
+// Create a wallet and fund it with the Testnet faucet
+
 // Require Express
 const express = require('express');
 // Create an Express App
@@ -10,9 +17,11 @@ app.use(express.static(__dirname + '/public'));
 // Start the server on port 3000
 app.listen(4090, () => {
   console.log('http://localhost:4090');
+  
 });
 // Create a route for the home page
 app.get('/', (req, res) => {
   res.render('index.html');//i
 });
+
 

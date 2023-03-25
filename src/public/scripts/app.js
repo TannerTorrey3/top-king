@@ -354,5 +354,7 @@ function Board(){
     exitBtn.addEventListener('click', closeExpandable);
 
 }
+
 Board();
+
     

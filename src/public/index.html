@@ -9,6 +9,7 @@
     <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
     <link rel="icon" href="/img/icons/icon-192x192.png">
     <link rel="preload" href="/assets/Roboto/Roboto-Black.ttf" as="font" type="font/ttf" crossorigin>
+    <script src="https://unpkg.com/xrpl@2.0.0/build/xrpl-latest-min.js"></script>
     <title>Top King Chess</title>
     <style id="html-css">
         :root{
@@ -228,5 +229,16 @@
     <div id="myBoard" style="width: 44%"></div>
     <script type="module" src="./scripts/sw.js"></script>
     <script type="module" src="./scripts/app.js"></script>
+    <script>
+        async function ledgerConnect(){
+            const ledgerNode = new xrpl.Client("wss://s.altnet.rippletest.net:51233");
+            await ledgerNode.connect();
+            fund_result = await ledgerNode.fundWallet()
+            test_wallet = fund_result.wallet;
+            console.log(fund_result.wallet.publicKey)
+            ledgerNode.disconnect();
+        }
+        ledgerConnect();
+    </script>
 </body>
 </html>
