@@ -1,11 +1,5 @@
 
 const compression = require('compression');
-const xrpl = require('xrpl');
-
-let fund_result, test_wallet;
-
-
-// Create a wallet and fund it with the Testnet faucet
 
 // Require Express
 const express = require('express');

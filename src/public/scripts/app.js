@@ -354,7 +354,9 @@ function Board(){
     exitBtn.addEventListener('click', closeExpandable);
 
 }
-
+async function establishConnection(){
+    
+}
 Board();
 
     

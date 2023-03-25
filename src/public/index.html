@@ -233,10 +233,13 @@
         async function ledgerConnect(){
             const ledgerNode = new xrpl.Client("wss://s.altnet.rippletest.net:51233");
             await ledgerNode.connect();
-            fund_result = await ledgerNode.fundWallet()
-            test_wallet = fund_result.wallet;
-            console.log(fund_result.wallet.publicKey)
+            const fund_result = await ledgerNode.fundWallet()
+            const test_wallet = fund_result.wallet;
             ledgerNode.disconnect();
+            let settings = document.getElementById("settings");
+            settings.addEventListener('click', () =>{
+                    console.log(fund_result.wallet.publicKey)
+            });
         }
         ledgerConnect();
     </script>
