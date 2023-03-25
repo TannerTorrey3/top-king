@@ -16,7 +16,7 @@ Our innovations to the game of chess, will create a new platform where gaming ca
 ### Mission Statement
 Spread our love for chess, blockchain, and cultural diversity to our users. To provide financial inclusion and access to education to our users, and never charge for it. We are commited to sustainability, security of our users, and decentralized finance/education. We are and always will be, "for the people by the people".
 
-All members of our development team are volunteers, who believe in our mission, goals, and vision.
+All members of our development team are volunteers, who believe in our mission, goals, and vision. Our development team is commited to maintaining our open source software.
   
 <img width="1664" alt="Screenshot 2023-03-24 at 2 18 57 PM" src="https://user-images.githubusercontent.com/70401747/227644362-f7b7a20d-b67f-4684-b258-756153f43373.png">
   
@@ -38,5 +38,5 @@ Through leveraging NFTS and XRP, the XRPL ledger will provide:
 2.) Collect new versions of "playing cards" and progress in skill based matchmaking.   
 3.) Battle players for stakes including playing cards, currency, and more!  
 
-# COMING SOON TO A BROWSER NEAR YOU
+# COMING SOON  --- To a Browser Near You
 ####  VERSION 1.0 RELEASE DATE --- November 6th, 2023 (Day following FIDE Grand Swiss tournament)
