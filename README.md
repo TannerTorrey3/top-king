@@ -38,5 +38,5 @@ Through leveraging NFTS and XRP, the XRPL ledger will provide:
 2.) Collect new versions of "playing cards" and progress in skill based matchmaking.   
 3.) Battle players for stakes including playing cards, currency, and more!  
 
-# COMING SOON  --- To a Browser Near You
+# COMING SOON: To a Browser Near You
 ####  VERSION 1.0 RELEASE DATE --- November 6th, 2023 (Day following FIDE Grand Swiss tournament)
