@@ -7,6 +7,17 @@ Battle players across the globe, trade commodities, currency, and communicate in
 #
 https://user-images.githubusercontent.com/70401747/227644449-b1fdf68d-575b-4ab3-9b68-c9488447e0aa.mov
 #
+## Overview
+This repository contains Top King, a classic chess game that offers single and multiplayer modes. The project is built using JavaScript and HTML. This project was developed by a group of volunteers who are both passionate about coding and chess. If you encounter any issues or have suggestions for improvement, please open an issue or submit a pull request.
+
+## Files
+The current version of Top-King chess consists of the following files:
+  * README.md, the file that you're currently reading  
+  * node_modules, ---
+  * package.json, ---
+  * src, includes the full source code in JavaScript and HTML
+
+## Compiling Top-King 
 
 ## Our Mission and Importance
 The game of chess has been developing alongside culture and technology for over 1,400 years. Since the 1990's we have seen a boom in technical innovations related to chess. When Deep Blue, a chess computer built by IBM, defeated the reigning World Chess Champion, it showed the world the coming influence of artificial intelligence and maching learning. 
