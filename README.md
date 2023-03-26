@@ -9,7 +9,7 @@ https://user-images.githubusercontent.com/70401747/227644449-b1fdf68d-575b-4ab3-
 #
 
 ## Our Mission and Importance
-The game of chess has been developing alongside culture and technology for over 1,400 years. Since the 1990's we have seen a boom in technical innovations related to chess. When Deep Blue defeated the reigning World Chess Champion, it showed the world the coming influence of artificial intelligence and maching learning. 
+The game of chess has been developing alongside culture and technology for over 1,400 years. Since the 1990's we have seen a boom in technical innovations related to chess. When Deep Blue, a chess computer built by IBM, defeated the reigning World Chess Champion, it showed the world the coming influence of artificial intelligence and maching learning. 
 
 Our innovations to the game of chess, will create a new platform where gaming can be more than a past-time. It can be an act of charity, a source of income, and way to exchange culture and learn.
 
