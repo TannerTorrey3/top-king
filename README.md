@@ -6,7 +6,8 @@ Battle players across the globe, trade commodities, currency, and communicate in
 
 #
 https://user-images.githubusercontent.com/70401747/227644449-b1fdf68d-575b-4ab3-9b68-c9488447e0aa.mov
-#
+(ADD IN OVERVIEW)
+Top King Chess is a free-to-play chess game that uses blockchain technology to provide financial inclusion and cultural exchange to users worldwide.
 
 ## Our Mission and Importance
 The game of chess has been developing alongside culture and technology for over 1,400 years. Since the 1990's we have seen a boom in technical innovations related to chess. When Deep Blue, a chess computer built by IBM, defeated the reigning World Chess Champion, it showed the world the coming influence of artificial intelligence and maching learning. 
@@ -14,7 +15,7 @@ The game of chess has been developing alongside culture and technology for over 
 Our innovations to the game of chess, will create a new platform where gaming can be more than a past-time. It can be an act of charity, a source of income, and way to exchange culture and learn.
 
 ### Mission Statement
-Spread our love for chess, blockchain, and cultural diversity to our users. To provide financial inclusion and access to education to our users, and never charge for it. We are commited to sustainability, security of our users, and decentralized finance/education. We are and always will be, "for the people by the people".
+Our mission is to promote chess, blockchain, and cultural diversity while providing financial inclusion and education to our users. We will never charge for our services and are commited to sustainability, security of our users, and decentralized finance/education. We are and always will be, "for the people by the people". Our team is dedicated to maintaining open-source software and providing users with a platform that offers more than just entertainment.
 
 All members of our development team are volunteers, who believe in our mission, goals, and vision. Our development team is commited to maintaining our open source software.
   
