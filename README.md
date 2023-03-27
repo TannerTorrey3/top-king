@@ -1,6 +1,8 @@
 # Top King Chess
-#### The Social Networking/Gaming Platform built on the XRP Ledger
-## Think YOU are the Top King?
+## The Social Networking/Gaming Platform built on the XRP Ledger  
+![top King](https://user-images.githubusercontent.com/70401747/227815742-ce69b753-a75c-4a12-bf3d-aa6590d91e42.png)  
+  
+### Think YOU are the Top King?
 Learn the fundamentals of chess and the XRPL all on one platform, FREE!!!
 Battle players across the globe, trade commodities, currency, and communicate in real-time. Exchange culture, knowledge, and a love for the XRPL! 
 
