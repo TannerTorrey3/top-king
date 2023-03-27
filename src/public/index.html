@@ -9,7 +9,8 @@
     <link rel="apple-touch-icon" href="/img/icons/icon-192x192.png">
     <link rel="icon" href="/img/icons/icon-192x192.png">
     <link rel="preload" href="/assets/Roboto/Roboto-Black.ttf" as="font" type="font/ttf" crossorigin>
-    <script src="https://unpkg.com/xrpl@2.0.0/build/xrpl-latest-min.js"></script>
+    <script rel="preload" src="https://cdn.socket.io/4.5.4/socket.io.min.js"></script>
+    <script rel="preload" src="https://unpkg.com/xrpl@2.0.0/build/xrpl-latest-min.js"></script>
     <title>Top King Chess</title>
     <style id="html-css">
         :root{
@@ -241,6 +242,10 @@
                     console.log(fund_result.wallet.publicKey)
             });
         }
+        function socketConnect(){
+            const ioSocket = new io();
+        }
+        socketConnect();
         ledgerConnect();
     </script>
 </body>
