@@ -12,14 +12,6 @@ https://user-images.githubusercontent.com/70401747/227644449-b1fdf68d-575b-4ab3-
 ## Overview
 This repository contains Top King, a classic chess game that offers single and multiplayer modes. The project is built using JavaScript and HTML. This project was developed by a group of volunteers who are both passionate about coding and chess. If you encounter any issues or have suggestions for improvement, please open an issue or submit a pull request.
 
-## Files
-The current version of Top-King chess consists of the following files:
-  * README.md, the file that you're currently reading  
-  * node_modules, ---
-  * package.json, ---
-  * src, includes the full source code in JavaScript and HTML
-
-## Compiling Top-King 
 
 ## Our Mission and Importance
 The game of chess has been developing alongside culture and technology for over 1,400 years. Since the 1990's we have seen a boom in technical innovations related to chess. When Deep Blue, a chess computer built by IBM, defeated the reigning World Chess Champion, it showed the world the coming influence of artificial intelligence and maching learning. 
@@ -32,12 +24,22 @@ Spread our love for chess, blockchain, and cultural diversity to our users. To p
 All members of our development team are volunteers, who believe in our mission, goals, and vision. Our development team is commited to maintaining our open source software.
   
 <img width="1664" alt="Screenshot 2023-03-24 at 2 18 57 PM" src="https://user-images.githubusercontent.com/70401747/227644362-f7b7a20d-b67f-4684-b258-756153f43373.png">
-  
+
+## Files
+The current version of Top-King chess consists of the following files:
+  * README.md, the file that you're currently reading  
+  * node_modules, ---
+  * package.json, ---
+  * src, includes the full source code in JavaScript and HTML
+
+## Compiling Top-King 
+
 ## Funding
-### Prior Release
-Crowd sourced funds and grant programs will fund initial infastructure and deployment costs as well as advertising. 
-### Post Release
-Our free-to-play platform will be funded through sales of contract, providing users temporary voting rights and membership to the Development and Design Board.  
+
+  ### Before Release
+  * Crowd sourced funds and grant programs will fund initial infastructure and deployment costs as well as advertising. 
+  ### After Release
+  * Our free-to-play platform will be funded through sales of contract, providing users temporary voting rights and membership to the Development and Design Board.  
   
 <img width="1673" alt="Screenshot 2023-03-24 at 2 17 48 PM" src="https://user-images.githubusercontent.com/70401747/227644309-522787c6-074c-42e7-8a24-d2ec46a43a5a.png">
   
@@ -47,9 +49,14 @@ Progressive Web App, prioritizes network communication over retrieval from a loc
 Will be able to support XRPL offline, requests will be sent upon reconnection.  
   
 Through leveraging NFTS and XRP, the XRPL ledger will provide:  
-1.) Ability for players to play-and-profit, in real time.  
-2.) Collect new versions of "playing cards" and progress in skill based matchmaking.   
-3.) Battle players for stakes including playing cards, currency, and more!  
+  * Ability for players to play-and-profit, in real time.  
+  * Collect new versions of "playing cards" and progress in skill based matchmaking.   
+  * Battle players for stakes including playing cards, currency, and more!  
 
 # COMING SOON: To a Browser Near You
 ####  VERSION 1.0 RELEASE DATE --- November 6th, 2023 (Day following FIDE Grand Swiss tournament)
+
+# Have a Question or want to help?
+  * Contact Us.   
+  * Check our the repository discussions to get your questions answered or explore.     
+  * Check out the repository issues to get started with a contribution.   
